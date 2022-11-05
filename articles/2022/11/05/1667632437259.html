@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="theme-color" content="#3b3e43"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"/><title>世界，你好！ - May0712 的个人博客</title><meta name="description" content="Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 Solo 支持 Hexo/Jekyll 数据导入。 对了，出于安全考虑请尽快完成如下操作： 登录链滴社区后，在个人设置 - B3 中更新 B3 Key 在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新 另外，如果你需要开启评论系统，请参考 Solo 集成 Gitalk 评论系统。 最后，如果你觉得 Solo 很赞的话，请到项目主页 Watch、Star、Fork 三连 😍"/><meta property="og:description" content="Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 Solo 支持 Hexo/Jekyll 数据导入。 对了，出于安全考虑请尽快完成如下操作： 登录链滴社区后，在个人设置 - B3 中更新 B3 Key 在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新 另外，如果你需要开启评论系统，请参考 Solo 集成 Gitalk 评论系统。 最后，如果你觉得 Solo 很赞的话，请到项目主页 Watch、Star、Fork 三连 😍"/>    <meta name="keywords" content="Solo,Java,博客,开源"/><link rel="dns-prefetch" href="https://clearloving.github.io"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="preconnect" href="https://clearloving.github.io"><link rel="icon" type="image/png" href="https://b3log.org/images/brand/solo-128.png"/><link rel="apple-touch-icon" href="https://b3log.org/images/brand/solo-128.png"><link rel="shortcut icon" type="image/x-icon" href="https://b3log.org/images/brand/solo-128.png"><meta name="copyright" content="B3log"/><meta http-equiv="Window-target" content="_top"/><meta property="og:locale" content="zh_CN"/><meta property="og:title" content="世界，你好！ - May0712 的个人博客"/><meta property="og:site_name" content="May0712 的个人博客"/><meta property="og:url"      content="https://clearloving.github.io/hello-solo?"/><meta property="og:image" content="https://b3log.org/images/brand/solo-128.png"/><link rel="search" type="application/opensearchdescription+xml" title="世界，你好！ - May0712 的个人博客" href="/opensearch.xml"><link href="https://clearloving.github.io/rss.xml" title="RSS" type="application/rss+xml" rel="alternate"/><link rel="manifest" href="https://clearloving.github.io/manifest.json">        <link rel="canonical" href="https://clearloving.github.io/hello-solo">        <link rel="stylesheet"
+<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="theme-color" content="#3b3e43"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"/><title>设计模式--抽象工厂 - May0712 的个人博客</title><meta name="description" content="A small and beautiful blogging system. 一款小而美的博客系统。"/><meta property="og:description" content="A small and beautiful blogging system. 一款小而美的博客系统。"/>    <meta name="keywords" content="Solo,Java,博客,开源"/><link rel="dns-prefetch" href="https://clearloving.github.io"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="preconnect" href="https://clearloving.github.io"><link rel="icon" type="image/png" href="https://b3log.org/images/brand/solo-128.png"/><link rel="apple-touch-icon" href="https://b3log.org/images/brand/solo-128.png"><link rel="shortcut icon" type="image/x-icon" href="https://b3log.org/images/brand/solo-128.png"><meta name="copyright" content="B3log"/><meta http-equiv="Window-target" content="_top"/><meta property="og:locale" content="zh_CN"/><meta property="og:title" content="设计模式--抽象工厂 - May0712 的个人博客"/><meta property="og:site_name" content="May0712 的个人博客"/><meta property="og:url"      content="https://clearloving.github.io/articles/2022/11/05/1667632437259.html?"/><meta property="og:image" content="https://b3log.org/images/brand/solo-128.png"/><link rel="search" type="application/opensearchdescription+xml" title="设计模式--抽象工厂 - May0712 的个人博客" href="/opensearch.xml"><link href="https://clearloving.github.io/rss.xml" title="RSS" type="application/rss+xml" rel="alternate"/><link rel="manifest" href="https://clearloving.github.io/manifest.json">        <link rel="canonical" href="https://clearloving.github.io/articles/2022/11/05/1667632437259.html">        <link rel="stylesheet"
               href="https://clearloving.github.io/skins/Bubble/css/base.css?1667621892187"/>
-            <link rel="next" title="设计模式--单例模式" href="https://clearloving.github.io/articles/2022/10/05/1664963675783.html">
+            <link rel="prev" title="设计模式--工厂方法" href="https://clearloving.github.io/articles/2022/11/05/1667622285705.html">
     <script src="https://unpkg.com/vditor@3.8.15/dist/js/icons/ant.js" async="" id="vditorIconScript"></script></head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
@@ -78,27 +78,27 @@
             </ul>
         </div>
     </div>
-    <div class="article__top" style="background-image: url(https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100)">
-        <div style="background-image: url(https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100)"></div>
+    <div class="article__top" style="background-image: url(https://b3logfile.com/bing/20181116.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)">
+        <div style="background-image: url(https://b3logfile.com/bing/20181116.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)"></div>
         <canvas id="articleTop"></canvas>
     </div>
     <div class="article">
         <div class="ft__center">
             <div class="article__meta">
                 <time>
-                    2022-10-05
+                    2022-11-05
                 </time>
                 /
                     <a rel="tag"
-                       href="https://clearloving.github.io/tags/Solo">Solo</a> &nbsp;
+                       href="https://clearloving.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">设计模式</a> &nbsp;
             </div>
             <h2 class="article__title">
-                世界，你好！
+                设计模式--抽象工厂
             </h2>
 <div class="article__share"
-     data-title="世界，你好！"
+     data-title="设计模式--抽象工厂"
      data-blogtitle="May0712 的个人博客"
-     data-url="https://clearloving.github.io/hello-solo"
+     data-url="https://clearloving.github.io/articles/2022/11/05/1667632437259.html"
      data-avatar="https://b3logfile.com/avatar/1664962509115_1664962741113.jpeg?imageView2/1/w/128/h/128/interlace/0/q/100">
     <span class="item" data-type="qqz">
         <svg viewBox="0 0 32 32" width="100%" height="100%">
@@ -127,21 +127,161 @@
 </div>        </div>
         <div class="wrapper">
             <section class="vditor-reset articles article__content">
-                <p><img src="https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100" alt=""></p>
-<p>Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 <a href="https://ld246.com/article/1498490209748" target="_blank">Solo 支持 Hexo/Jekyll 数据导入</a>。</p>
-<p>对了，出于安全考虑请尽快完成如下操作：</p>
-<ol>
-<li>登录链滴社区后，在<a href="https://ld246.com/settings/b3" target="_blank">个人设置 - B3</a> 中更新 B3 Key</li>
-<li>在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新</li>
-</ol>
-<p>另外，如果你需要开启评论系统，请参考 <a href="https://ld246.com/article/1594988019287" target="_blank">Solo 集成 Gitalk 评论系统</a>。</p>
-<p>最后，如果你觉得 Solo 很赞的话，请到<a href="https://github.com/88250/solo" target="_blank">项目主页</a> Watch、Star、Fork 三连 😍</p>
+                <p><img src="https://b3logfile.com/bing/20181116.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
+<h1 id="toc_h1_0">意图</h1>
+<p><strong>抽象工厂模式</strong>是一种创建型设计模式， 它能创建一系列相关的对象， 而无需指定其具体类。</p>
+<p>简单来说，抽象工厂模式下，我们实际的对象创建都交给了一些工厂类去做，这些工厂类根据具体需求不同，可以创建出很多种类型的工厂类。</p>
+<h1 id="toc_h1_1">问题场景</h1>
+<p>比如去家具城买家具，如果确定了某种风格的家居装饰（比如：中式），那后续在家具城买的桌子，椅子、床等等家具都是类似风格。</p>
+<p>此时需要设法去单独生成每一件家具对象，保证出于一致的风格，最后才能让整个房间看着和谐统一。</p>
+<p>但是在代码实现过程中，我们也不希望每次增加新的装修风格时，都需要对已有的代码进行调整，并且家具的产品目录更新迭代非常快，要保证每次调整只是新增，而非修改既有代码。</p>
+<h1 id="toc_h1_2">解决方案</h1>
+<p>那么针对上面的情况，在抽象工厂模式下，可以为每件家具产品确定一个声明接口，比如椅子，就创建一个Chair接口；然后根据风格不同，每种风格都实现这些接口，这样就组成了一个继承关系：</p>
+<p><img src="https://b3logfile.com/file/2022/11/Xnip2022-11-05_14-40-11-9jrZotq.jpg?imageView2/2/w/1280/format/jpg/interlace/1/q/100" alt="Xnip20221105144011.jpg"></p>
+<p>然后，接下来就需要声明一些抽象工厂，用于创建这一系列的具体家具产品，比如：创建一个FurnitureFactory，它里面定义一系列创建产品的方法，createChair、createSofa等等。</p>
+<p>注意，定义的这些方法，返回的都是抽象产品，并不是具体类型的实际产品，然后根据风格，比如ChineseFurnitureFactory、ModerFurnitureFactory。每一种具体的Factory里面才生产具体风格类型的产品。</p>
+<p>这么一处理之后，整个模型就差不多出来了：</p>
+<ul>
+<li>首先是有了一个抽象工厂类FurnitureFactory，里面定义了一系列抽象方法，主要是各种create方法，创建各种家具产品（桌子、椅子、沙发这类），但是这里的create方法返回类型都是抽象类型</li>
+<li>然后定义一系列具体类型的家具工厂类，在这些具体的家具工厂类中，重写各种create方法，来生成具体风格类型的家具产品。</li>
+<li>与此同时，定义一些家具产品的接口类（抽象类型），比如Chair、Sofa等等</li>
+<li>然后就可以引入一系列各种风格的具体产品类，比如中式椅子（ChineseChair）</li>
+</ul>
+<p>这样后续如果有新的风格加入了，比如现在客人需要的是维多利亚风格的家具，那么很简单，FurenitureFactory体系中，加入一种新的VictorianFurnitureFactory，继承自FurenitureFactory，然后创建一系列Victorian风格的家居产品类，继承对应产品类型的抽象类，如：VictorianChair implements Chair等。</p>
+<h1 id="toc_h1_3">代码示意</h1>
+<p>这里结合一个场景给出一些代码示例，假如我们在开发中，需要开发一些界面，界面上有一系列相关的元素组件，这里只举 Button和Checkbox为例。</p>
+<p>此时界面上需要展示一些按钮和复选框，但是不能一刀切全部都是同一种风格，要根据所处平台的不同，展示不同风格的界面：Windows风格、macOS风格等。</p>
+<p>此时可以参考上面介绍过的抽象工厂方法模式，我们最终想要的效果可能就是：通过一个GUI对象，调用它的paint方法，根据不同所处的不同平台，最终渲染出不同风格的组件效果。</p>
+<p>那么此时可以先设计一个抽象工厂类，它的作用主要就是用来createButton、createCheckbox。此时这两个create方法返回值类型必须是抽象的类型，因此需要有一个Button接口和Checkbox接口作为抽象类型。</p>
+<p>然后根据平台需要，这里暂定两种风格：Windows、Mac。</p>
+<p>那么就需要有具体风格类型的工厂类，用于创建对应风格的产品：WindowsFactory、MacFactory。这两种factory内部都有对应的create方法，用于创建对应平台风格的产品组件。</p>
+<p>然后针对产品组件，也需要进行风格分类，因此就有了WindowsButton、MacButton、WindowsCheckbox、MacCheckbox，它们各自实现Button和Checkbox接口。</p>
+<p>WindowsFactory里面创建Windows风格的按钮和复选框对象，MacFactory则创建Mac风格的按钮和复选框对象</p>
+<p><img src="https://b3logfile.com/file/2022/11/Xnip2022-11-05_15-05-48-9AYHETn.jpg?imageView2/2/w/1280/format/jpg/interlace/1/q/100" alt="Xnip20221105150548.jpg"></p>
+<h1 id="toc_h1_4">源代码</h1>
+<pre><code class="language-java">/**
+ * 这是一个抽象的工厂，它可以通配所有的产品类型
+ */
+public interface GUIFactory {
+    Button createButton();
+    Checkbox createCheckbox();
+}
+
+
+public class MacOSFactory implements GUIFactory{
+    @Override
+    public Button createButton() {
+        return new MacOSButton();
+    }
+
+    @Override
+    public Checkbox createCheckbox() {
+        return new MacOSCheckbox();
+    }
+}
+
+
+public class WindowsFactory implements GUIFactory{
+    @Override
+    public Button createButton() {
+        return new WindowsButton();
+    }
+
+    @Override
+    public Checkbox createCheckbox() {
+        return new WindowsCheckbox();
+    }
+}
+
+public interface Button {
+    void paint();
+}
+
+public class MacOSButton implements Button {
+    @Override
+    public void paint() {
+        System.out.println("MacOS Button created!");
+    }
+}
+
+public class WindowsButton implements Button{
+    @Override
+    public void paint() {
+        System.out.println("Windows Button created!");
+    }
+}
+
+
+public interface Checkbox {
+    void paint();
+}
+
+public class MacOSCheckbox implements Checkbox {
+    @Override
+    public void paint() {
+        System.out.println("MacOS checkbox created!");
+    }
+}
+
+
+public class WindowsCheckbox implements Checkbox{
+    @Override
+    public void paint() {
+        System.out.println("Windows Checkbox created!");
+    }
+}
+</code></pre>
+<p>客户端代码</p>
+<pre><code class="language-java">/**
+ * 客户端代码
+ * 此时Factory并不关心具体的Factory类型使用，而是通过抽象接口来进行通配
+ */
+public class Application {
+    private Button button;
+    private Checkbox checkbox;
+
+    public Application(GUIFactory factory) {
+        button = factory.createButton();
+        checkbox = factory.createCheckbox();
+    }
+
+    public void paint() {
+        button.paint();
+        checkbox.paint();
+    }
+}
+</code></pre>
+<p>Demo.java</p>
+<pre><code class="language-java">public class Demo {
+    /**
+     * 程序中需要关注factory的类型，并且在运行中创建对应的对象
+     * 通常使用配置或者环境变量来实现具体类型的创建和初始化
+     */
+    private static Application configureApplication() {
+        Application app;
+        GUIFactory factory;
+        String osName = System.getProperty("os.name").toLowerCase();
+        if (osName.contains("mac")) {
+            factory = new MacOSFactory();
+        } else {
+            factory = new WindowsFactory();
+        }
+        app = new Application(factory);
+        return app;
+    }
+
+    public static void main(String[] args) {
+        Application app = configureApplication();
+        app.paint();
+    }
+}
+</code></pre>
                     <div>
                         <hr>
 
-标题：世界，你好！<br>
+标题：设计模式--抽象工厂<br>
 作者：<a href="https://clearloving.github.io" target="_blank">May0712</a><br>
-地址：<a href="https://clearloving.github.io/hello-solo" target="_blank">https://clearloving.github.io/hello-solo</a><br>
+地址：<a href="https://clearloving.github.io/articles/2022/11/05/1667632437259.html" target="_blank">https://clearloving.github.io/articles/2022/11/05/1667632437259.html</a><br>
 
 <!-- 签名档内可使用 HTML、JavaScript -->
 <br>
@@ -150,6 +290,24 @@
         </div>
 
     </div>
+        <div class="post__toc">
+<ul class="article__toc">
+        <li class="toc__h1">
+            <a href="#toc_h1_0">意图</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_1">问题场景</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_2">解决方案</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_3">代码示意</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_4">源代码</a>
+        </li>
+</ul>        </div>
         <div class="wrapper">
             <div id="gitalk-container"></div>
             <div id="vcomment"
@@ -159,7 +317,7 @@
         background: rgba(255,255,255,0.9);
         box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         padding: 20px;"
-                 data-name="May0712" data-postId="1664962831294"></div>
+                 data-name="May0712" data-postId="1667632437259"></div>
             <div id="b3logsolocomments"></div>
         </div>
     <div class="article__bottom">
@@ -210,7 +368,7 @@
     version: "4.4.0",
     staticSite: true,
     showCodeBlockLn: false,
-    articleId: "1664962831294",
+    articleId: "1667632437259",
   }
 </script>
 <script type="text/javascript"
@@ -249,12 +407,15 @@
     </div>
 </div>
 
+    <svg viewBox="0 0 32 32" width="100%" height="100%" class="side__top side__top--toc">
+        <path d="M30 18h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM30 6.25h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM2 25.75h28c1.1 0 2 0.9 2 2s-0.9 2-2 2h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2z"></path>
+    </svg>
 
 <script type="text/javascript">
     Util.addScript('https://clearloving.github.io/js/page.min.js?1667621892187', 'soloPageScript')
     var page = new Page({
         "commentContentCannotEmptyLabel": "评论不能为空",
-        "oId": "1664962831294",
+        "oId": "1667632437259",
         "blogHost": "https://clearloving.github.io",
         "randomArticles1Label": "随机阅读：",
         "externalRelevantArticles1Label": "站外相关阅读："
@@ -263,7 +424,7 @@
         page.load();
     page.tips.externalRelevantArticlesDisplayCount = "0";
         page.loadRandomArticles('<h3>随机阅读</h3>');
-        page.loadRelevantArticles('1664962831294', '<h3>相关阅读</h3>');
+        page.loadRelevantArticles('1667632437259', '<h3>相关阅读</h3>');
     Skin.initArticle()
     });
 </script>
@@ -271,4 +432,4 @@
 </body>
 </html>
 
-<!-- Generated by Latke (https://github.com/88250/latke) in 22ms, 2022/11/05 15:14:12 -->
+<!-- Generated by Latke (https://github.com/88250/latke) in 15ms, 2022/11/05 15:14:12 -->
