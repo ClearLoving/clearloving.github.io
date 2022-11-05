@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="theme-color" content="#3b3e43"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"/><title>世界，你好！ - May0712 的个人博客</title><meta name="description" content="Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 Solo 支持 Hexo/Jekyll 数据导入。 对了，出于安全考虑请尽快完成如下操作： 登录链滴社区后，在个人设置 - B3 中更新 B3 Key 在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新 另外，如果你需要开启评论系统，请参考 Solo 集成 Gitalk 评论系统。 最后，如果你觉得 Solo 很赞的话，请到项目主页 Watch、Star、Fork 三连 😍"/><meta property="og:description" content="Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 Solo 支持 Hexo/Jekyll 数据导入。 对了，出于安全考虑请尽快完成如下操作： 登录链滴社区后，在个人设置 - B3 中更新 B3 Key 在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新 另外，如果你需要开启评论系统，请参考 Solo 集成 Gitalk 评论系统。 最后，如果你觉得 Solo 很赞的话，请到项目主页 Watch、Star、Fork 三连 😍"/>    <meta name="keywords" content="Solo,Java,博客,开源"/><link rel="dns-prefetch" href="https://clearloving.github.io"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="preconnect" href="https://clearloving.github.io"><link rel="icon" type="image/png" href="https://b3log.org/images/brand/solo-128.png"/><link rel="apple-touch-icon" href="https://b3log.org/images/brand/solo-128.png"><link rel="shortcut icon" type="image/x-icon" href="https://b3log.org/images/brand/solo-128.png"><meta name="copyright" content="B3log"/><meta http-equiv="Window-target" content="_top"/><meta property="og:locale" content="zh_CN"/><meta property="og:title" content="世界，你好！ - May0712 的个人博客"/><meta property="og:site_name" content="May0712 的个人博客"/><meta property="og:url"      content="https://clearloving.github.io/hello-solo?"/><meta property="og:image" content="https://b3log.org/images/brand/solo-128.png"/><link rel="search" type="application/opensearchdescription+xml" title="世界，你好！ - May0712 的个人博客" href="/opensearch.xml"><link href="https://clearloving.github.io/rss.xml" title="RSS" type="application/rss+xml" rel="alternate"/><link rel="manifest" href="https://clearloving.github.io/manifest.json">        <link rel="canonical" href="https://clearloving.github.io/hello-solo">        <link rel="stylesheet"
+<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="theme-color" content="#3b3e43"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"/><title>设计模式--工厂方法 - May0712 的个人博客</title><meta name="description" content="A small and beautiful blogging system. 一款小而美的博客系统。"/><meta property="og:description" content="A small and beautiful blogging system. 一款小而美的博客系统。"/>    <meta name="keywords" content="Solo,Java,博客,开源"/><link rel="dns-prefetch" href="https://clearloving.github.io"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="preconnect" href="https://clearloving.github.io"><link rel="icon" type="image/png" href="https://b3log.org/images/brand/solo-128.png"/><link rel="apple-touch-icon" href="https://b3log.org/images/brand/solo-128.png"><link rel="shortcut icon" type="image/x-icon" href="https://b3log.org/images/brand/solo-128.png"><meta name="copyright" content="B3log"/><meta http-equiv="Window-target" content="_top"/><meta property="og:locale" content="zh_CN"/><meta property="og:title" content="设计模式--工厂方法 - May0712 的个人博客"/><meta property="og:site_name" content="May0712 的个人博客"/><meta property="og:url"      content="https://clearloving.github.io/articles/2022/11/05/1667622285705.html?"/><meta property="og:image" content="https://b3log.org/images/brand/solo-128.png"/><link rel="search" type="application/opensearchdescription+xml" title="设计模式--工厂方法 - May0712 的个人博客" href="/opensearch.xml"><link href="https://clearloving.github.io/rss.xml" title="RSS" type="application/rss+xml" rel="alternate"/><link rel="manifest" href="https://clearloving.github.io/manifest.json">        <link rel="canonical" href="https://clearloving.github.io/articles/2022/11/05/1667622285705.html">        <link rel="stylesheet"
               href="https://clearloving.github.io/skins/Bubble/css/base.css?1667621892187"/>
-            <link rel="next" title="设计模式--单例模式" href="https://clearloving.github.io/articles/2022/10/05/1664963675783.html">
+            <link rel="prev" title="设计模式--单例模式" href="https://clearloving.github.io/articles/2022/10/05/1664963675783.html">
     <script src="https://unpkg.com/vditor@3.8.15/dist/js/icons/ant.js" async="" id="vditorIconScript"></script></head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
@@ -78,27 +78,27 @@
             </ul>
         </div>
     </div>
-    <div class="article__top" style="background-image: url(https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100)">
-        <div style="background-image: url(https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100)"></div>
+    <div class="article__top" style="background-image: url(https://b3logfile.com/bing/20200922.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)">
+        <div style="background-image: url(https://b3logfile.com/bing/20200922.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)"></div>
         <canvas id="articleTop"></canvas>
     </div>
     <div class="article">
         <div class="ft__center">
             <div class="article__meta">
                 <time>
-                    2022-10-05
+                    2022-11-05
                 </time>
                 /
                     <a rel="tag"
-                       href="https://clearloving.github.io/tags/Solo">Solo</a> &nbsp;
+                       href="https://clearloving.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">设计模式</a> &nbsp;
             </div>
             <h2 class="article__title">
-                世界，你好！
+                设计模式--工厂方法
             </h2>
 <div class="article__share"
-     data-title="世界，你好！"
+     data-title="设计模式--工厂方法"
      data-blogtitle="May0712 的个人博客"
-     data-url="https://clearloving.github.io/hello-solo"
+     data-url="https://clearloving.github.io/articles/2022/11/05/1667622285705.html"
      data-avatar="https://b3logfile.com/avatar/1664962509115_1664962741113.jpeg?imageView2/1/w/128/h/128/interlace/0/q/100">
     <span class="item" data-type="qqz">
         <svg viewBox="0 0 32 32" width="100%" height="100%">
@@ -127,21 +127,155 @@
 </div>        </div>
         <div class="wrapper">
             <section class="vditor-reset articles article__content">
-                <p><img src="https://b3logfile.com/bing/20220218.jpg?imageView2/1/w/1280/h/720/interlace/1/q/100" alt=""></p>
-<p>Solo 博客系统已经初始化完毕，可在管理后台 - 工具 - 偏好设定中调整更多细节设置。如果需要导入已有博客文章，请参考文档 <a href="https://ld246.com/article/1498490209748" target="_blank">Solo 支持 Hexo/Jekyll 数据导入</a>。</p>
-<p>对了，出于安全考虑请尽快完成如下操作：</p>
-<ol>
-<li>登录链滴社区后，在<a href="https://ld246.com/settings/b3" target="_blank">个人设置 - B3</a> 中更新 B3 Key</li>
-<li>在 Solo 管理后台 - 工具 - 用户管理中也进行同样的 B3 Key 更新</li>
-</ol>
-<p>另外，如果你需要开启评论系统，请参考 <a href="https://ld246.com/article/1594988019287" target="_blank">Solo 集成 Gitalk 评论系统</a>。</p>
-<p>最后，如果你觉得 Solo 很赞的话，请到<a href="https://github.com/88250/solo" target="_blank">项目主页</a> Watch、Star、Fork 三连 😍</p>
+                <p><img src="https://b3logfile.com/bing/20200922.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
+<h1 id="toc_h1_0">意图</h1>
+<p>工厂方法模式属于 <strong>创建型设计模式</strong>的一种，在父类中提供一个创建对象的方法，允许子类根据具体的业务场景实例化特定类型的对象。</p>
+<h1 id="toc_h1_1">结合具体场景</h1>
+<p>这里举一种代码开发中设想的一种简单场景：</p>
+<p>比如如果我们在开发界面时，存在一些本地化的界面展示效果，这里以简单的Dialog和Button两个组件做简单案例分析。</p>
+<p>假如我们需要根据当前系统运行的所在平台，区分出到底是Web界面的HTML风格、或者说Mac OS/Windows这种客户端的风格，根据不同的所处环境，渲染出符合所在环境的界面效果。</p>
+<h2 id="toc_h2_2">Dialog</h2>
+<p>作为用户端的最终使用效果，我们可能就是一句简单的render操作：</p>
+<pre><code class="language-java">dialog.renderWindow();
+</code></pre>
+<p>但是这句话的背后，需要面临的是：我们首先需要根据配置或者其他的指定方案来确定具体的Dialog类型，然后在具体的Dialog类型里面做子类中更具体类型的渲染效果。</p>
+<p>所以这里可以简单分析出需要一个基类Dialog，然后根据需要，还要有另外两种Dialog类型：HtmlDialog、WindowsDialog。</p>
+<p>另外一点：对于<code>renderWindow()</code>方法，在基类中应该是只有定义，具体的子类Dialog来去实现它。</p>
+<p><img src="https://b3logfile.com/file/2022/11/Xnip2022-11-05_11-35-52-hwgenxL.jpg?imageView2/2/w/1280/format/jpg/interlace/1/q/100" alt="Xnip20221105113552.jpg"></p>
+<h2 id="toc_h2_3">Button</h2>
+<p>再来分析一下Button问题，首先可以明确的是Button是放在Dialog里面的，所以Button和Dialog的关系属于组合的关系。在具体的Dialog类中，一旦调用了渲染方法之后，理论上会连同内部的Button一并创建并渲染了。</p>
+<p>因此基于这种状况，可以确定：Dialog类内部应该要有createButton操作，同时又因为Button也要做平台区分，WindowsButton/HtmlButton；所以依照同样的模式，可以做一个基类：Button，然后根据需要，引入具体的子Button类。</p>
+<p>注意：Button属于Dialog上的一个功能，因此可以考虑Button设计为一个interface，Dialog设计成一个抽象类。</p>
+<p><img src="https://b3logfile.com/file/2022/11/Xnip2022-11-05_12-01-11-nKoFpJ7.jpg?imageView2/2/w/1280/format/jpg/interlace/1/q/100" alt="Xnip20221105120111.jpg"></p>
+<p>现在来回头梳理整个流程后，就会发现，主要就涉及到了六个类：Dialog、WindowsDialog、HtmlDialog、Button、WindowsButton、HtmlButton。</p>
+<p>它们三个一组，总共分为两组，同时Dialog和Button属于组合的关系，Button居于Dialog内部，因此总体的UML图可以设计如下：</p>
+<p><img src="https://b3logfile.com/file/2022/11/Xnip2022-11-05_12-08-37-CBYUATP.jpg?imageView2/2/w/1280/format/jpg/interlace/1/q/100" alt="Xnip20221105120837.jpg"></p>
+<p>至此整个分析过程结束，然后可以依据此分析，写出一个初版的代码方案，这里贴上一份源码，具体细节有所调整，但是主体方案跟这个一模一样。</p>
+<h1 id="toc_h1_4">源码</h1>
+<p>Dialog.java</p>
+<pre><code class="language-java">/**
+ * Dialog：基类
+ */
+public abstract class Dialog {
+    public void renderWindow() {
+        //...other code...
+
+        Button okButton = createButton();
+        okButton.render();
+    }
+
+    /**
+     * 留给子类来重写，创建具体指定的按钮类型
+     * @return
+     */
+    protected abstract Button createButton();
+}
+</code></pre>
+<p>WindowsDialog.java</p>
+<pre><code class="language-java">public class WindowsDialog extends Dialog{
+    @Override
+    protected Button createButton() {
+        return new WindowsButton();
+    }
+}
+</code></pre>
+<p>HtmlDialog.java</p>
+<pre><code class="language-java">public class HtmlDialog extends Dialog{
+    @Override
+    protected Button createButton() {
+        return new HtmlButton();
+    }
+}
+</code></pre>
+<p>Button.java</p>
+<pre><code class="language-java">public interface Button {
+    void render();
+    void onClick();
+}
+</code></pre>
+<p>WindowsButton.java</p>
+<pre><code class="language-java">import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class WindowsButton implements Button{
+    JPanel panel = new JPanel();
+    JFrame frame = new JFrame();
+    JButton button;
+    @Override
+    public void render() {
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel label = new JLabel("Hello World!");
+        label.setOpaque(true);
+        label.setBackground(new Color(235, 233, 126));
+        label.setFont(new Font("Dialog", Font.BOLD, 44));
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        frame.getContentPane().add(panel);
+        panel.add(label);
+        onClick();
+        panel.add(button);
+
+        frame.setSize(320, 200);
+        frame.setVisible(true);
+        onClick();
+    }
+
+    @Override
+    public void onClick() {
+        button = new JButton("Exit");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                System.exit(0);
+            }
+        });
+    }
+}
+</code></pre>
+<p>HtmlButton.java</p>
+<pre><code class="language-java">public class HtmlButton implements Button{
+    @Override
+    public void render() {
+        System.out.println("&lt;button&gt;Test Button&lt;/button&gt;");
+        onClick();
+    }
+
+    @Override
+    public void onClick() {
+        System.out.println("Click! Button says - 'Hello World!'");
+    }
+}
+</code></pre>
+<p>Demo.java</p>
+<pre><code class="language-java">public class Demo {
+    private static Dialog dialog;
+
+    public static void main(String[] args) {
+        configure();
+        dialog.renderWindow();
+    }
+
+    /**
+     * 配置处理，这里一般在正式场景中都是使用配置或者环境变量的方式进行指定
+     */
+    static void configure() {
+        if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+            dialog = new WindowsDialog();
+        } else {
+            dialog = new HtmlDialog();
+        }
+    }
+}
+</code></pre>
                     <div>
                         <hr>
 
-标题：世界，你好！<br>
+标题：设计模式--工厂方法<br>
 作者：<a href="https://clearloving.github.io" target="_blank">May0712</a><br>
-地址：<a href="https://clearloving.github.io/hello-solo" target="_blank">https://clearloving.github.io/hello-solo</a><br>
+地址：<a href="https://clearloving.github.io/articles/2022/11/05/1667622285705.html" target="_blank">https://clearloving.github.io/articles/2022/11/05/1667622285705.html</a><br>
 
 <!-- 签名档内可使用 HTML、JavaScript -->
 <br>
@@ -150,6 +284,24 @@
         </div>
 
     </div>
+        <div class="post__toc">
+<ul class="article__toc">
+        <li class="toc__h1">
+            <a href="#toc_h1_0">意图</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_1">结合具体场景</a>
+        </li>
+        <li class="toc__h2">
+            <a href="#toc_h2_2">Dialog</a>
+        </li>
+        <li class="toc__h2">
+            <a href="#toc_h2_3">Button</a>
+        </li>
+        <li class="toc__h1">
+            <a href="#toc_h1_4">源码</a>
+        </li>
+</ul>        </div>
         <div class="wrapper">
             <div id="gitalk-container"></div>
             <div id="vcomment"
@@ -159,7 +311,7 @@
         background: rgba(255,255,255,0.9);
         box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         padding: 20px;"
-                 data-name="May0712" data-postId="1664962831294"></div>
+                 data-name="May0712" data-postId="1667622285705"></div>
             <div id="b3logsolocomments"></div>
         </div>
     <div class="article__bottom">
@@ -210,7 +362,7 @@
     version: "4.4.0",
     staticSite: true,
     showCodeBlockLn: false,
-    articleId: "1664962831294",
+    articleId: "1667622285705",
   }
 </script>
 <script type="text/javascript"
@@ -249,12 +401,15 @@
     </div>
 </div>
 
+    <svg viewBox="0 0 32 32" width="100%" height="100%" class="side__top side__top--toc">
+        <path d="M30 18h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM30 6.25h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM2 25.75h28c1.1 0 2 0.9 2 2s-0.9 2-2 2h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2z"></path>
+    </svg>
 
 <script type="text/javascript">
     Util.addScript('https://clearloving.github.io/js/page.min.js?1667621892187', 'soloPageScript')
     var page = new Page({
         "commentContentCannotEmptyLabel": "评论不能为空",
-        "oId": "1664962831294",
+        "oId": "1667622285705",
         "blogHost": "https://clearloving.github.io",
         "randomArticles1Label": "随机阅读：",
         "externalRelevantArticles1Label": "站外相关阅读："
@@ -263,7 +418,7 @@
         page.load();
     page.tips.externalRelevantArticlesDisplayCount = "0";
         page.loadRandomArticles('<h3>随机阅读</h3>');
-        page.loadRelevantArticles('1664962831294', '<h3>相关阅读</h3>');
+        page.loadRelevantArticles('1667622285705', '<h3>相关阅读</h3>');
     Skin.initArticle()
     });
 </script>
@@ -271,4 +426,4 @@
 </body>
 </html>
 
-<!-- Generated by Latke (https://github.com/88250/latke) in 42ms, 2022/11/05 12:29:16 -->
+<!-- Generated by Latke (https://github.com/88250/latke) in 25ms, 2022/11/05 12:29:16 -->

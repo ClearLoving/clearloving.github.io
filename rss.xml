@@ -6,8 +6,17 @@
     <atom:link href="https://clearloving.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <description>记录精彩的程序人生</description>
     <generator>Solo, v4.4.0, https://b3log.org/solo</generator>
-    <lastBuildDate>Wed, 05 Oct 2022 21:22:13 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Nov 2022 12:29:16 +0800</lastBuildDate>
     <language>zh-cn</language>
+    <item>
+      <title>设计模式--工厂方法</title>
+      <link>https://clearloving.github.io/articles/2022/11/05/1667622285705.html</link>
+      <description/>
+      <author>May0712</author>
+      <guid>https://clearloving.github.io/articles/2022/11/05/1667622285705.html</guid>
+      <category>设计模式</category>
+      <pubDate>Sat, 05 Nov 2022 12:25:23 +0800</pubDate>
+    </item>
     <item>
       <title>设计模式--单例模式</title>
       <link>https://clearloving.github.io/articles/2022/10/05/1664963675783.html</link>
